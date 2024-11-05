@@ -1,0 +1,58 @@
+*{
+    font-family: 'Satoshi', sans-serif;
+    margin: 0px;
+    border: none;
+    outline: none;
+    gap: 0px;
+}
+/* body{
+    display: flex;
+    justify-content: center,space-between;
+    gap: 0px;
+    /* background-image: linear-gradient(rgb(21, 31, 48),rgb(8, 20, 38)); */
+/* } */ 
+.box{
+    width: 1000px;
+    height: 625px;
+    display: grid;
+    grid-template-columns: 50% 50% ; 
+    justify-content: space-between; 
+}
+.sign{
+    
+    margin-left: 90px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+}
+.head{
+    text-align: center;
+    color: white;
+    margin-top: 60px;
+}
+.name,.email{
+    width: 320px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.SignUp{
+    border: 2px solid ;
+    color: aliceblue;
+    background-color: green;
+    width: 150px;
+    margin-left: 98px;
+}
+.left1{
+    background-image: url("../DALL·E\ 2024-10-05\ 20.16.47\ -\ A\ modern\,\ dynamic\ logo\ for\ a\ secure\ messaging\ and\ document\ storage\ application.\ The\ design\ should\ be\ more\ intricate\,\ incorporating\ a\ high-tech\ lock\ sy.webp");
+    background-size: contain;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+}
+.right1{
+  background-image:linear-gradient( rgba(47,61,84,255),rgba(39,95,195,255));
+  background-size: cover;
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+}
