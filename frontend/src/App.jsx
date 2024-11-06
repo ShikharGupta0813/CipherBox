@@ -7,7 +7,7 @@ function App() {
   return (
   <>
     <Chat/>
-    <Connection/>
+    {/* <Connection/> */}
   </>
   )
 }
