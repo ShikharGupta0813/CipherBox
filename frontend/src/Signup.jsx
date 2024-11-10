@@ -39,11 +39,11 @@ function Signup(){
         <div className="right1">
         <h1 className="head">Signup Page</h1>
          <form action="/" className="sign" onSubmit={triggerfunction} >
-         <input type="text"name="name" placeholder="                                       NAME" className="name" value={name} onChange={(e)=>setName(e.target.value)}/><br />
-         <input type="text"name="username" placeholder="                                   USERNAME" className="username" value={username} onChange={(e)=>setUsername(e.target.value)}/><br />
-         <input type="text"name="email" placeholder="                                        Email" className="email" value={email} onChange={(e)=>setEmail(e.target.value)}/>
+         <input type="text"name="name" placeholder="NAME" className="name" value={name} onChange={(e)=>setName(e.target.value)}/><br />
+         <input type="text"name="username" placeholder="USERNAME" className="username" value={username} onChange={(e)=>setUsername(e.target.value)}/><br />
+         <input type="text"name="email" placeholder="Email" className="email" value={email} onChange={(e)=>setEmail(e.target.value)}/>
          <br />
-         <input type="text"name="password" placeholder="                                   PASSWORD" className="password" value={password} onChange={(e)=>setPassword(e.target.value)}/><br />
+         <input type="text"name="password" placeholder="PASSWORD" className="password" value={password} onChange={(e)=>setPassword(e.target.value)}/><br />
          <button name="SignUp" type="submit" className="SignUp">SignUp</button>
          </form>
         </div>

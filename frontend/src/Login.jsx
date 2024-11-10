@@ -41,12 +41,12 @@ function Login(){
          <form action="/" className="log" onSubmit={logfunction}>
          <div className="input-container">
          <span className="icon1">👤</span>
-         <input type="text"name="username" placeholder="       USERNAME" className="username"  value={username} onChange={(e)=>setUsername(e.target.value)}/>
+         <input type="text"name="username" placeholder="USERNAME" className="username"  value={username} onChange={(e)=>setUsername(e.target.value)}/>
          </div>
          <br/>
          <div className="pssword-container">
             <span className="icon">🔒</span>
-         <input type={showPassword ? "text" : "password"}  name="password" placeholder="       PASSWORD" className="password"  value={password} onChange={(e)=>setPassword(e.target.value)} /><br /><br />
+         <input type={showPassword ? "text" : "password"}  name="password" placeholder="PASSWORD" className="password"  value={password} onChange={(e)=>setPassword(e.target.value)} /><br /><br />
          <span className="eye-icon" onClick={togglePasswordVisibility}>
                 {showPassword ? '👁️' : '🙈'}
             </span>
