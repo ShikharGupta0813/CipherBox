@@ -98,15 +98,61 @@
   display: grid;
   grid-template-columns: 50% 50%;
   justify-items: center;
+  margin-top: 5rem;
 }
 .doc{
-  height: 40rem;
-  width: 50rem;
+  height: 30rem;
+  width: 45rem;
   border: 2px solid white;
-
+  background-color: rgb(30, 43, 66);
+  text-align:center;
+  padding-top: 6rem;
+  font-family: 'General Sans';
 } 
 .chaT{
-  height: 40rem;
-  width: 50rem;
+  height: 30rem;
+  width: 45rem;
+  border: 2px solid white;
+  background-color: rgb(30, 43, 66);
+  text-align:center;
+  padding-top: 8rem;
+  font-family: 'General Sans';
+}
+.doc p{
+  padding-top: 5rem;
+}
+.chaT p{
+  padding-top: 7rem;
+}
+/* .chaT{
+  height: 30rem;
+  width: 40rem;
   border:2px solid white;
-} 
+  background-color: rgb(30, 43, 66);
+}  */
+.tecH{
+  margin-top:5rem;
+  height: 40rem;
+  background-color: #006A67;
+  color: #FFF4B7;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  font-family: 'stardom';
+}
+.tech{
+  text-align:center;
+  padding: 5rem;
+  padding-left: 8rem;
+  font-size: 2.5rem;
+}
+.tech ul,.workflow ul{
+  list-style: none;
+}
+.workflow{
+  text-align:left;
+  padding-top: 5rem;
+  padding-left: 5rem;
+  padding-right: 3rem;
+  font-family: 'Clash Grotesk';
+  font-size: 2rem;
+}

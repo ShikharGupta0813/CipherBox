@@ -1,6 +1,7 @@
 import "./site.css";
 import Navbar from "./navbar.jsx";
 import Image1 from "./assets/2.jpeg";
+import Image2 from "./assets/flowchart.jpeg";
 import Footer from "./footer.jsx";
 
 const site = () => {
@@ -54,19 +55,60 @@ const site = () => {
               through projects involving MERN, NLP, encryption, and secure cloud
               storage.
             </div>
-            <div className="con3">S:
+            <div className="con3">
+              S:
               <ul>
-                <li><a href="https://www.linkedin.com/in/shikhar-gupta-389552251/">Linkedin</a></li>
-                <li><a href="https://github.com/ShikharGupta0813/">Github</a></li>
-                <li><a href="https://www.instagram.com/_gupta_shikhar/">Instagram</a></li>
+                <li>
+                  <a href="https://www.linkedin.com/in/shikhar-gupta-389552251/">
+                    Linkedin
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/ShikharGupta0813/">Github</a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/_gupta_shikhar/">
+                    Instagram
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
         </div>
         <div className="main">
-          <div className="doc"></div>
-          <div className="chaT"></div>
+          <div className="doc">Document Sharing And Storage in Encrypted Form <br /> <p>Click Here </p></div>
+          <div className="chaT">Encrypted Chat System <br /> <p>Click Here</p></div>
         </div>
+        <div className="tecH">
+          <div className="tech">
+            <ul>
+              <li>React</li>
+              <li>Node</li>
+              <li>Express</li>
+              <li>MongoDb</li>
+              <li>JWT</li>
+              <li>GSAP</li>
+              <li>Socket.io</li>
+            </ul>
+          </div>
+          <div className="workflow">
+            <ul>
+            <li>
+            User Authentication: User signs in or registers using JWT/OAuth2 for
+            secure access. Document Upload: User uploads a document; it is
+            encrypted on the client/server side and stored in AWS S3. Metadata
+            and permissions are saved in MongoDB. Permission Setup: User sets
+            document permissions (view/edit) and can generate secure links or
+            share with specific users. Encrypted Messaging: User initiates chat
+            with a contact. Messages are encrypted and sent in real-time using
+            Socket.io. Document Retrieval: User requests a document. System
+            checks permissions, retrieves it from AWS S3, and decrypts for
+            viewing. Logout: User logs out, invalidating session tokens to
+            ensure secure exit.
+            </li></ul>
+          </div>
+        </div>
+        <Footer />
       </div>
     </div>
   );
