@@ -1,13 +1,13 @@
-*{
-    font-family: 'Satoshi', sans-serif;
-    margin: 0px;
-}
-body{
+.outer-container{
     display: flex;
     justify-content: center;
     background: rgb(24, 36, 56);
+    height: 100vh;
+    width: 100vw;
 }
+
 .container{
+    margin: auto;
     width: 1000px;
     height: 625px;
     display: grid;
@@ -15,28 +15,29 @@ body{
 }
 
 .log{
-    
     margin-left: 4.3rem;
     margin-top: 60px;
     display: flex;
     flex-direction:column;
     justify-content: center;
 }
-h1{
+
+h1 {
     margin-top: 120px;
     text-align: center;
     font-weight: 700;
     color: #f5f5f5;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
 }
+
 .username,.password{
     width: 320px;
     height: 50px;
     border: 2px solid black;
     border-radius: 10px;
     padding-left: 7.7rem; 
-    /* font-size: 1.5rem; */
 }
+
 .LogIn{
     border: none;
     color: #fff;
@@ -49,11 +50,13 @@ h1{
     font-size: 16px;
     transition: 0.3s ease-in-out;
 }
+
 .LogIn:hover {
     background-color: #0056b3;
     box-shadow: 0 4px 8px rgba(0, 91, 204, 0.5);
     transform: translateY(-2px);
 }
+
 .left{
     background-image: url("../DALL·E\ 2024-10-05\ 20.16.47\ -\ A\ modern\,\ dynamic\ logo\ for\ a\ secure\ messaging\ and\ document\ storage\ application.\ The\ design\ should\ be\ more\ intricate\,\ incorporating\ a\ high-tech\ lock\ sy.webp");
     background-size: cover;
@@ -63,18 +66,7 @@ h1{
     border-bottom-left-radius: 1.5rem;
     position: relative;
 }
-/* .left::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(137, 135, 135, 0.5);
-    z-index: 1;
-    border-top-left-radius: 1.5rem;
-    border-bottom-left-radius: 1.5rem;
-} */
+
 .right{
   background-image:linear-gradient( rgba(47,61,84,255),rgba(39,95,195,255));
   background-size: cover;
@@ -82,37 +74,28 @@ h1{
   border-bottom-right-radius: 1.5rem;
 }
 
+.input-container {
+    display: grid;
+}
+
+.password-container {
+    display: grid;
+}
 
 .eye-icon {
     position: absolute;
-    right: 28%;
-    top: 52.7%;
-    transform: translateY(-50%);
     cursor: pointer;
-    font-size: 18px;
-    color: #999;
+    margin-top: 0.8rem;
+    margin-left: -2rem;
 }
 
-.icon {
+.icon, .icon1 {
     position: absolute;
-    margin-left: 0.5rem;
-    top: 53%;
-    transform: translateY(-50%);
-    font-size: 18px;
-    font-size: 20px;
-    color: #6c757d;
-    transition: color 0.3s ease;
-  }
-.icon1 {
-    position: absolute;
-    top: 44%;
-    margin-left: 0.5rem;
-    transform: translateY(-50%);
-    font-size: 20px;
-    color: #6c757d;
-    transition: color 0.3s ease;
-  }
- .username:hover, .password:hover {
+    margin-top: 0.8rem;
+    margin-left: 1rem;
+}
+
+.username:hover, .password:hover {
     border-color: #007bff;
     transition: 0.3s ease-in-out;
 }

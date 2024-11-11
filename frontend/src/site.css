@@ -1,0 +1,89 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+.body2{
+    min-height: 100vh;
+    background-color: rgb(35, 54, 87);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loadingnum2{
+    font-size: 3rem;
+    display: grid;
+    text-align: center; 
+    margin-top: 0px;
+    color: white;
+    font-weight: 700;
+    border-radius: 1.5rem;
+    background-color: rgb(35, 54, 87);
+    height: auto; 
+    box-sizing: border-box;
+}
+.lines2{
+  font-family: 'Clash Grotesk', sans-serif;
+  font-weight: 200;
+  font-size: 3rem;
+  text-align: left;
+  padding-left: 10.1rem;
+  padding-top: 4.1rem
+}
+
+.loadingbar2{
+  background-color: rgb(243, 237, 237);
+  height: 0.2rem;
+  margin-bottom: 5.7rem;
+}
+
+/* Marquee container */
+.marquee {
+    display: flex;
+    overflow: hidden; /* Hide overflow */
+    white-space: nowrap;
+    /* width: 100%; Full width */
+    height: 20rem;
+  }
+  
+  /* Marquee content */
+  .marquee__content {
+    color: #FFF4B7;
+    font-size: 8rem;
+    display: inline-block;
+    padding-right: 100%; /* Space between repeated content */
+    animation: marquee 40s linear infinite; /* Controls speed and infinite loop */
+  }
+  
+  /* Marquee animation */
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  .docs{
+    position: absolute;
+    right: 25%;
+    top: 30%;
+  }
+  .chats{
+    position: absolute;
+    right: 15%;
+    top: 30%;
+  }
+  .extra-content {
+    width: 100%;
+    padding: 2rem;
+    color: #FFF4B7;
+    text-align: center;
+    background-color: rgb(35, 54, 87);
+}.extra-content {
+  width: 100%;
+  padding: 2rem;
+  color: #FFF4B7;
+  text-align: center;
+  background-color: rgb(35, 54, 87);
+}

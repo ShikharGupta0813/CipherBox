@@ -1,4 +1,4 @@
-import { useState,useMemo } from "react";
+import { useState, useMemo } from "react";
 import "./chatapp.css";
 import Search from "./searchbar"
 import UserList from "./userlist"; // Import the UserList component
@@ -12,8 +12,6 @@ function Chat() {
   const [selectedUser, setSelectedUser] = useState(null); // State to track the selected user
   const [userMessages, setUserMessages] = useState({}); // State to track messages for each user
   const [searchTerm, setSearchTerm] = useState(""); // State to track search query
-
-  
 
   const handleSendMessage = () => {
     if (!selectedUser) return; // Return if no user is selected
@@ -87,37 +85,39 @@ function Chat() {
     console.log(`Deleted chat for user: ${user}`);
   };
   return (
-    <div className="chat-container">
-      <div className="user-list-container">
-        <Search
-        searchTerm={searchTerm}
-        setSearchTerm={setSearchTerm}
-        />
-        <UserList 
-          users={filteredUsers} 
-          onSelectUser={handleSelectUser} 
-          selectedUser={selectedUser}
-          onBlockUser={handleBlockUser} 
-          onDeleteChat={handleDeleteChat} 
-        />  {/* Render the filtered user list */}
-      </div>
-      <div className="mainbox">
+    <div className="outer-container3">
+      <div className="chat-container">
+        <div className="user-list-container">
+          <Search
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+          />
+          <UserList 
+            users={filteredUsers} 
+            onSelectUser={handleSelectUser} 
+            selectedUser={selectedUser}
+            onBlockUser={handleBlockUser} 
+            onDeleteChat={handleDeleteChat} 
+          />  {/* Render the filtered user list */}
+        </div>
+        
+        <div className="mainbox">
+          {/* Import the MessageContainer component here */}
+          <MessageContainer 
+            selectedUser={selectedUser} 
+            userMessages={userMessages} 
+          />
 
-        {/* Import the MessageContainer component here */}
-        <MessageContainer 
-          selectedUser={selectedUser} 
-          userMessages={userMessages} 
-        />
-
-        {/* Import the WriteMessage component here */}
-        <WriteMessage 
-          message={message} 
-          setMessage={setMessage} 
-          handleSendMessage={handleSendMessage} 
-          setSelectedFile={setSelectedFile} 
-          selectedUser={selectedUser} 
-          handleReceiveMessage={handleReceiveMessage}
-        />
+          {/* Import the WriteMessage component here */}
+          <WriteMessage 
+            message={message} 
+            setMessage={setMessage} 
+            handleSendMessage={handleSendMessage} 
+            setSelectedFile={setSelectedFile} 
+            selectedUser={selectedUser} 
+            handleReceiveMessage={handleReceiveMessage}
+          />
+        </div>
       </div>
     </div>
   );

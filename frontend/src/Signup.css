@@ -1,20 +1,16 @@
-*{
-    font-family: 'Satoshi', sans-serif;
-    margin: 0px;
-    border: none;
-    outline: none;
-    gap: 0px;
-}
-/* body{
+.outer-container2 {
     display: flex;
-    justify-content: center,space-between;
-    gap: 0px;
-    /* background-image: linear-gradient(rgb(21, 31, 48),rgb(8, 20, 38)); */
-/* } */ 
+    justify-content: center;
+    background: rgb(24, 36, 56);
+    height: 100vh;
+    width: 100vw;
+}
+
 .box{
     width: 1000px;
     height: 625px;
     display: grid;
+    margin: auto;
     grid-template-columns: 50% 50% ; 
     justify-content: space-between; 
 }

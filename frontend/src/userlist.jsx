@@ -21,7 +21,7 @@ const UserList = ({ users, onSelectUser,selectedUser, onBlockUser, onDeleteChat 
           
           {/* Settings Icon */}
           <span className="settings-icon" onClick={() => toggleSettings(user)}>
-            ⚙️ {/* You can replace this with any settings icon you like */}
+            ⚙️ 
           </span>
         
           {/* Settings Box */}

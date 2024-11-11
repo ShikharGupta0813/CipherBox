@@ -34,7 +34,8 @@ function Signup(){
           });
     }
     return(
-    <div className="box">
+      <div className="outer-container2">
+       <div className="box">
         <div className="left1"></div>
         <div className="right1">
         <h1 className="head">Signup Page</h1>
@@ -47,7 +48,8 @@ function Signup(){
          <button name="SignUp" type="submit" className="SignUp">SignUp</button>
          </form>
         </div>
-    </div>
-    )
+      </div>
+    </div>  
+  )
 }
 export default Signup; 
