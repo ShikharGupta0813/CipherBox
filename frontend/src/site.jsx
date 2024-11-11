@@ -26,7 +26,7 @@ const site=()=>{
       </div>
     </div>
     <div className="extra-content">
-      <h3>hello bye hi</h3>
+      <p><b>CipherBox</b> - Your ultimate vault for secure file storage and private messaging. Protect and share documents with full encryption, control access with ease, and enjoy secure, real-time chats. Keep your data safe and confidential, all in one powerful, user-friendly platform.</p>
     </div>
     </div>
     
