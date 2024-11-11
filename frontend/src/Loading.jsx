@@ -33,7 +33,7 @@ const LoadingAnimation = () => {
     </div>
       <div className='loadingbar'>
         </div>
-      <p> {progress}%</p>
+      <p className='para'> {progress}%</p>
     </div>
     </div>
   );

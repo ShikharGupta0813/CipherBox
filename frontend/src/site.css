@@ -78,8 +78,7 @@
 
     font-family: 'Courier New', Courier, monospace;
     margin-left: 0px;
-    display: flex;
-    justify-items: left;
+    text-align: left;
     padding: 2rem;
     color: #FFF4B7;
     background-color: rgb(9, 222, 140);
