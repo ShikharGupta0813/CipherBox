@@ -1,9 +1,31 @@
-.heading{
-    color: rgb(40, 171, 40);
+.nav{
+    display: flex;
+    flex-direction: row;
+    gap: 70rem;
+    padding-top: 2rem;
 }
+.nav2{
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+}
+
+.heading{
+    color: #eadfa1;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.heading b {
+    font-weight: 900;
+}
+
+
 .login{
     font-size: 2rem;
+    color: azure;
 }
 .signup{
     font-size: 2rem;
+    color: azure;
 }
