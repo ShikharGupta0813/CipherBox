@@ -3,8 +3,48 @@ import Navbar from "./navbar.jsx";
 import Image1 from "./assets/2.jpeg";
 import Image2 from "./assets/flowchart.jpeg";
 import Footer from "./footer.jsx";
+import React, { useState,useEffect } from 'react';
+import gsap from 'gsap';
 
 const site = () => {
+
+  const [textAnim1,setTextAnim1] = useState("");
+  const [textAnim2,setTextAnim2] = useState("");
+
+  function hovDocument(){
+    setTextAnim1("Documents");
+    setTimeout(()=>{
+      gsap.from(".textAnim1 span", {
+        y: 100,
+        opacity: 0,
+        duration: 0.3,
+        delay: 0.2,
+        stagger: 0.1
+      })
+    }, 1);
+  }
+
+  function hovChat(){
+    setTextAnim2("Chats")
+    setTimeout(()=>{
+      gsap.from(".textAnim2 span", {
+        y: 100,
+        opacity: 0,
+        duration: 0.3,
+        delay: 0.2,
+        stagger: 0.1
+      })
+    }, 1);
+  }
+
+  function hovNothingDoc(){
+    setTextAnim1("")
+  }
+
+  function hovNothingChat(){
+    setTextAnim2("")
+  }
+
   return (
     <div className="body2">
       <Navbar />
@@ -76,10 +116,19 @@ const site = () => {
           </div>
         </div>
         <div className="main">
-          <div className="doc">Document Sharing And Storage in Encrypted Form <br /><p>Click Here </p></div>
-          <div className="chaT">Encryptrd Chat System <br /> <p>Click Here</p></div>
-        </div>
-        <div className="tecH">
+          <div className="doc" onMouseEnter={hovDocument} onMouseLeave={hovNothingDoc}>Document    Sharing And Storage in Encrypted Form <br /><p>Click Here</p>
+            <div className="textAnim1">
+              {textAnim1.split("").map((char, index) => (<span key={index}>{char}</span>))}
+            </div>
+          </div>
+          <div className="chaT" onMouseEnter={hovChat} onMouseLeave={hovNothingChat}>Encryptrd Chat System <br /> <p>Click Here</p>
+            <div className="textAnim2">
+              {textAnim2.split("").map((char, index) => (<span key={index}>{char}</span>))}
+            </div>
+          </div>
+
+         </div>
+         <div className="tecH">
           <div className="tech">
             <ul>
               <li>React</li>

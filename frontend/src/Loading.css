@@ -1,5 +1,4 @@
 .loadingnum{
- 
     font-size: 3rem;
     margin: auto;
     display: grid;
@@ -7,7 +6,7 @@
     color: white;
     font-weight: 700;
     border-radius: 1.5rem;
-    padding: 15vh 5vw;
+    padding: 4vh 4vw;
     background-color: rgb(35, 54, 87);
 }
 .lines{
@@ -16,8 +15,8 @@
   padding: 0px;
   text-align: left;
   margin-bottom: 3rem;
-  padding-left: 4.8rem;
-  padding-top: 2.5rem;
+  padding-left: 6rem;
+  padding-top: 7.9rem;
 }
 .para{
     margin-top: 3rem;

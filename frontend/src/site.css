@@ -103,20 +103,28 @@
 .doc{
   height: 30rem;
   width: 45rem;
-  border: 2px solid white;
+  border-radius: 2%;
+  border: 0.01rem solid white;
   background-color: rgb(30, 43, 66);
   text-align:center;
+  padding: 2rem;
   padding-top: 6rem;
   font-family: 'General Sans';
 } 
 .chaT{
   height: 30rem;
   width: 45rem;
-  border: 2px solid white;
+  border: 0.01rem solid white;
+  border-radius: 2%;
   background-color: rgb(30, 43, 66);
   text-align:center;
   padding-top: 8rem;
   font-family: 'General Sans';
+}
+.main :hover{
+ cursor: pointer;
+ height: 32rem;
+  width: 47rem;
 }
 .doc p{
   padding-top: 5rem;
@@ -124,12 +132,7 @@
 .chaT p{
   padding-top: 7rem;
 }
-/* .chaT{
-  height: 30rem;
-  width: 40rem;
-  border:2px solid white;
-  background-color: rgb(30, 43, 66);
-}  */
+
 .tecH{
   margin-top:5rem;
   height: 40rem;
@@ -155,4 +158,28 @@
   padding-right: 3rem;
   font-family: 'Clash Grotesk';
   font-size: 2rem;
+}
+
+.textAnim1{
+  position: absolute;
+  top: 132rem;
+  left: 20rem;
+  pointer-events: none;
+  font-size: 12rem;
+  color: #FFF4B7;
+  opacity: 0.85;
+}
+
+.textAnim2{
+  position: absolute;
+  top: 132rem;
+  left: 32rem;
+  pointer-events: none;
+  font-size: 12rem;
+  color: #FFF4B7;
+  opacity: 0.85;
+}
+
+.textAnim1 span, .textAnim2 span{
+  display: inline-block;
 }
