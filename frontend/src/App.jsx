@@ -4,6 +4,7 @@ import Chat from "./chatapp.jsx"
 import LoadingAnimation from "./Loading.jsx"
 import Site from "./site.jsx"
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import Docs from "./document.jsx"
 
 function App() {
   
@@ -15,6 +16,7 @@ function App() {
         <Route path="/next" element={<Site/>} />
       </Routes>
    </Router>
+   {/* <Docs/> */}
   </>
   )
 }

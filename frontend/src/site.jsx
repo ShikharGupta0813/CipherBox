@@ -76,8 +76,8 @@ const site = () => {
           </div>
         </div>
         <div className="main">
-          <div className="doc">Document Sharing And Storage in Encrypted Form <br /> <p>Click Here </p></div>
-          <div className="chaT">Encrypted Chat System <br /> <p>Click Here</p></div>
+          <div className="doc">Document Sharing And Storage in Encrypted Form <br /><p>Click Here </p></div>
+          <div className="chaT">Encryptrd Chat System <br /> <p>Click Here</p></div>
         </div>
         <div className="tecH">
           <div className="tech">

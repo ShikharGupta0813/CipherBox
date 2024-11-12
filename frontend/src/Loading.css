@@ -11,7 +11,8 @@
     background-color: rgb(35, 54, 87);
 }
 .lines{
-  font-size: 3rem;
+  font-family: 'General Sans', sans-serif;
+  font-size: 4rem;
   padding: 0px;
   text-align: left;
   margin-bottom: 3rem;
