@@ -58,7 +58,10 @@
     font-size: 12rem;
     display: inline-block;
     padding-right: 100%; /* Space between repeated content */
-    animation: marquee 80s linear infinite; /* Controls speed and infinite loop */
+    animation: marquee 120s linear infinite; /* Controls speed and infinite loop */
+  }
+  .marquee__content p{
+    text-transform: uppercase;
   }
   /* Marquee animation */
   @keyframes marquee {
