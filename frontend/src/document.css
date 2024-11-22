@@ -39,6 +39,14 @@
     top: 2%;
     font-size: 2rem;
 }
+.upload{
+    position:absolute;
+    color: white;
+    left: 68%;
+    right: 10%;
+    top: 2%;
+    font-size: 2rem;
+}
 .heaD{
     position:absolute;
     color: rgb(201, 210, 146);

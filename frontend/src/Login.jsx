@@ -1,9 +1,12 @@
-import { useState } from 'react';
+import { useState,useContext } from 'react';
+import  { AppContext } from "./appContext";
 import "./Login.css"
 function Login(){
   const [showPassword, setShowPassword] = useState(false);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  
+  const {token1,setToken1}=useContext(AppContext);
 
   const togglePasswordVisibility = () => {
       setShowPassword(!showPassword);
@@ -26,7 +29,8 @@ function Login(){
           return response.json();
         })
         .then(data => {
-          console.log(data); // Handle the response data
+          setToken1(data.token);
+          console.log(token1); // Handle the response data
         })
         .catch(error => {
           console.error('Error:', error);
