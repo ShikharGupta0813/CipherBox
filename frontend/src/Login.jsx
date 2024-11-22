@@ -1,12 +1,15 @@
 import { useState,useContext } from 'react';
 import  { AppContext } from "./appContext";
+import { useNavigate } from 'react-router-dom';
 import "./Login.css"
+
 function Login(){
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   
-  const {token1,setToken1}=useContext(AppContext);
+  const {token1,setToken1} = useContext(AppContext);
 
   const togglePasswordVisibility = () => {
       setShowPassword(!showPassword);
@@ -31,6 +34,7 @@ function Login(){
         .then(data => {
           setToken1(data.token);
           console.log(token1); // Handle the response data
+          navigate("/Site");
         })
         .catch(error => {
           console.error('Error:', error);

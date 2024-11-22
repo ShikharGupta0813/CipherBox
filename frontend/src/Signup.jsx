@@ -1,8 +1,9 @@
 import "./Signup.css"
 import { useState } from "react";
-<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,500,700,900&display=swap" rel="stylesheet"></link>
-function Signup(){
+import { useNavigate } from 'react-router-dom';
 
+function Signup(){
+  const navigate = useNavigate();
   const [name, setName] = useState('');
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -28,6 +29,7 @@ function Signup(){
           })
           .then(data => {
             console.log(data); // Handle the response data
+            navigate("/Login");
           })
           .catch(error => {
             console.error('Error:', error);

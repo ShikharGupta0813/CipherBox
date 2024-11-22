@@ -33,11 +33,18 @@ app.listen(3000, () => {
 });
 
 const verifyToken = (req, res, next) => {
-  const token = req.headers["authorization"]?.split(" ")[1];
+  const authHeader = req.headers.authorization;
+  console.log("Authorization Header:", authHeader); // Log the Authorization header
 
-  if (!token) {
-    return res.status(403).send({ required: "Token is required" });
+  if (!authHeader) {
+    return res.status(401).json({ message: "Authorization header missing" });
   }
+
+  const token = authHeader.split(" ")[1];
+  if (!token) {
+    return res.status(401).json({ message: "Token missing" });
+  }
+
     const decoded = jwt.verify(token, JWT_SECRET);
     req.user = decoded; // Attach user data to req object
     // req.userId = decoded.userId;

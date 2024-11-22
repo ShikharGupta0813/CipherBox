@@ -5,8 +5,12 @@ import Image2 from "./assets/flowchart.jpeg";
 import Footer from "./footer.jsx";
 import React, { useState,useEffect } from 'react';
 import gsap from 'gsap';
+import { useNavigate } from "react-router-dom";
 
 const site = () => {
+ 
+   
+  const navigate=useNavigate();
 
   const [textAnim1,setTextAnim1] = useState("");
   const [textAnim2,setTextAnim2] = useState("");
@@ -43,6 +47,13 @@ const site = () => {
 
   function hovNothingChat(){
     setTextAnim2("")
+  }
+
+  function clickDocs(){
+    navigate("/Docs");
+  }
+  function clickChat(){
+    navigate("/Chat");
   }
 
   return (
@@ -116,12 +127,12 @@ const site = () => {
           </div>
         </div>
         <div className="main">
-          <div className="doc" onMouseEnter={hovDocument} onMouseLeave={hovNothingDoc}>Document    Sharing And Storage in Encrypted Form <br /><p>Click Here</p>
+          <div className="doc" onMouseEnter={hovDocument} onMouseLeave={hovNothingDoc} onClick={clickDocs}>Document    Sharing And Storage in Encrypted Form <br /><p>Click Here</p>
             <div className="textAnim1">
               {textAnim1.split("").map((char, index) => (<span key={index}>{char}</span>))}
             </div>
           </div>
-          <div className="chaT" onMouseEnter={hovChat} onMouseLeave={hovNothingChat}>Encryptrd Chat System <br /> <p>Click Here</p>
+          <div className="chaT" onMouseEnter={hovChat} onMouseLeave={hovNothingChat} onClick={clickChat}>Encryptrd Chat System <br /> <p>Click Here</p>
             <div className="textAnim2">
               {textAnim2.split("").map((char, index) => (<span key={index}>{char}</span>))}
             </div>

@@ -19,7 +19,7 @@ const LoadingAnimation = () => {
        width:"100vw",
 
     });
-    setTimeout(()=>{navigate("/next")},5000)
+    setTimeout(()=>{navigate("/Site")},5000)
   }, []);
 
 

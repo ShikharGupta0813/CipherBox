@@ -25,7 +25,13 @@
     font-size: 2rem;
     color: azure;
 }
+.login:hover{
+    cursor: pointer;
+}
 .signup{
     font-size: 2rem;
     color: azure;
+}
+.signup:hover{
+    cursor:pointer;
 }
