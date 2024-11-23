@@ -33,8 +33,10 @@ const Docs = () => {
 
       if (response.ok) {
         setUploadStatus("File uploaded successfully!");
+        console.log(response);
       } else {
         setUploadStatus("Failed to upload the file.");
+        console.log(response);
       }
     } catch (error) {
       console.error("Error uploading file:", error);

@@ -1,19 +1,30 @@
 import "./site.css";
 import Navbar from "./navbar.jsx";
+import  { AppContext } from "./appContext";
 import Image1 from "./assets/2.jpeg";
-import Image2 from "./assets/flowchart.jpeg";
 import Footer from "./footer.jsx";
-import React, { useState,useEffect } from 'react';
+import React, { useState,useContext } from 'react';
 import gsap from 'gsap';
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const site = () => {
  
-   
+  const {islogged} = useContext(AppContext);
   const navigate=useNavigate();
 
   const [textAnim1,setTextAnim1] = useState("");
   const [textAnim2,setTextAnim2] = useState("");
+  const [warning, setWarning] = useState(null);
+  
+  function showWarning(message) {
+    setWarning(message);
+    // Auto-close the warning after 3 seconds
+    setTimeout(() => {
+      setWarning(null);
+    }, 3000);
+  }
 
   function hovDocument(){
     setTextAnim1("Documents");
@@ -49,14 +60,27 @@ const site = () => {
     setTextAnim2("")
   }
 
-  function clickDocs(){
+  function clickDocs(e){
+    e.stopPropagation();
+    if(islogged){
     navigate("/Docs");
+    }else{
+      //toast.warn("You are not logged in. Please log in to access this feature.")
+      showWarning("You are not logged in. Please log in to access this feature.");
+        
+    };
   }
   function clickChat(){
+    if(islogged){
     navigate("/Chat");
+    }else{
+      //toast.warn("You are not logged in. Please log in to access this feature.")
+      showWarning("You are not logged in. Please log in to access this feature.");
+    }
   }
 
   return (
+    <>
     <div className="body2">
       <Navbar />
       <div className="loadingnum2">
@@ -127,6 +151,11 @@ const site = () => {
           </div>
         </div>
         <div className="main">
+        {warning && (
+        <div className="custom-warning">
+          <span>{warning}</span>
+        </div>
+      )}
           <div className="doc" onMouseEnter={hovDocument} onMouseLeave={hovNothingDoc} onClick={clickDocs}>Document    Sharing And Storage in Encrypted Form <br /><p>Click Here</p>
             <div className="textAnim1">
               {textAnim1.split("").map((char, index) => (<span key={index}>{char}</span>))}
@@ -171,6 +200,8 @@ const site = () => {
         <Footer />
       </div>
     </div>
+    <ToastContainer />
+    </>
   );
 };
 

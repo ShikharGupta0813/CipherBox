@@ -10,9 +10,10 @@ import Docs from "./document.jsx"
 
 function App() {
   const [token1,setToken1]=useState("");
+  const [islogged,setIslogged]=useState(false);
   return (
 
-      <AppContext.Provider value={{ token1, setToken1 }}>
+      <AppContext.Provider value={{ token1, setToken1 ,islogged,setIslogged}}>
       <Router>
       <Routes>
       <Route path="/" element={<LoadingAnimation/>} />

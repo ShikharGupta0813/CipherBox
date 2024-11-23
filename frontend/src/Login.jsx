@@ -10,6 +10,7 @@ function Login(){
   const [password, setPassword] = useState('');
   
   const {token1,setToken1} = useContext(AppContext);
+  const {islogged,setIslogged} = useContext(AppContext);
 
   const togglePasswordVisibility = () => {
       setShowPassword(!showPassword);
@@ -33,6 +34,7 @@ function Login(){
         })
         .then(data => {
           setToken1(data.token);
+          setIslogged(true);
           console.log(token1); // Handle the response data
           navigate("/Site");
         })
